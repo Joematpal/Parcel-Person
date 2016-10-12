@@ -1,0 +1,138 @@
+/** {
+  box-sizing: border-box;
+}*/
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+header {
+  background: #464646;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+nav {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+nav a {
+}
+button  img {
+  height:20px;
+  width: 20px;
+}
+button {
+  display: inline;
+  font-weight: lighter;
+  font-size: 12px;
+  background-color: #5a5a5a;
+  border: none;
+  color: white;
+  border-bottom: orange;
+  margin: 10px;
+  padding:3px;
+  border-radius: 3px;
+}
+button > p {
+  float: left;
+  margin: 4px 5px;
+}
+button > img {
+  float: left;
+  height: 25px;
+  padding: 0px;
+  margin: 0px;
+}
+button:hover{
+  color: black;
+}
+/*main {
+display: flex;
+justify-content: space-between;
+}*/
+.left-bar {
+  display: block;
+  border-right: solid 1px darkgrey;
+  background-color: lightgrey;
+  width: 300px;
+  height: 100vh;
+}
+.search {
+  position: relative;
+  padding: 10px 0px 5px;
+  margin: 0 auto;
+  width: 90%;
+}
+.search span {
+  position: absolute;
+  top: 14px;
+  left: 6px;
+}
+.search span img {
+  height: 20px;
+}
+input[type=search] {
+  padding-left: 30px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: solid 1px darkgrey;
+}
+.left-bar-menu {
+  display: block;
+  color: darkgrey;
+  border-bottom: solid 1px darkgrey;
+}
+.left-bar-menu > button {
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  background-color: lightgrey;
+  margin-right: -4px
+}
+.button-on{
+  color: black;
+  border-bottom: solid 3px orange;
+}
+/*.left-bar-menu > button:nth-child(1){
+  margin-right: -4px
+}*/
+.left-line{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.history-trash {
+  display: block;
+  position: relative;
+  min-height: 25px;
+  padding: 10px;
+  border-bottom: solid 1px darkgrey;
+
+}
+.history-trash p, .history-trash img {
+  display: inline-block;
+  margin-right: -4px;
+  margin: 0px;
+
+}
+.history-trash p {
+  font-size: 14px;
+  color: orange;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+.history-trash img {
+  position:absolute;
+  width: 25px;
+  right: 0;
+}
+.history-list {
+
+}
