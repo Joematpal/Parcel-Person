@@ -181,7 +181,6 @@ nav {
 	.http-content{
 		position: absolute;
 		right: 0;
-		width: 70%;
 
 	.http-main {
 		display: inline-block;
@@ -400,3 +399,52 @@ nav {
 
 	}
 	}
+
+  #topnav {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 49px;
+  }
+
+  #sidebar {
+  	background-color: #EEE;
+      position: absolute;
+      top: 49px;
+      left: 0;
+      width: 303px;
+      overflow: auto;
+  }
+  #content {
+      position: absolute;
+      top: 49px;
+      left: 303px /* 200 + 6*/;
+      right: 0;
+      overflow: hidden;
+  }
+  #top-content {
+      position: absolute;
+      top: 0;
+      bottom: 136px; /* 130 + 6 */
+      left: 0;
+      right: 0;
+      background-color: #444;
+      overflow: auto;
+  }
+  #sidebar-resizer {
+    position: absolute;
+    top: 49px;
+    height: 100%;
+    left: 303px;
+    width: 10px;
+    cursor: ew-resize;
+    box-shadow: inset 3px 0px 3px 0px rgba(0,0,0,0.18);
+    z-index: 20;
+  }
+
+
+  #sidebar-resizer:hover, #preview-resizer:hover {
+  	// background-color: #AAA;
+  }

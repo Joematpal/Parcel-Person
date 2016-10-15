@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header id="topnav">
       <nav>
         <div class="main-nav">
           <a href="#"><button><p>builder</p></button></a>
@@ -20,105 +20,18 @@
         </div>
       </nav>
     </header>
+
     <ui-view>
       <main>
-        <div class="left-bar">
-          <div class="search">
-            <span><img src="src/icons/ic_mag_24px.svg" alt="" /></span>
-            <input type=search placeholder="Filter">
-
-          </div>
-          <div class="left-bar-menu">
-            <button class="button-on">History</button>
-            <button> Collection</button>
-          </div>
-
-          <div class="history-trash">
-              <p>Save to collection</p>
-
-              <img class="trash-can"src="src/icons/ic_delete_black_36px.svg" alt=""/>
-              <img class="expand" src="src/icons/ic_expand_more_greyish_36px.svg" alt=""/>
-
-          </div>
-          <div class="history-list">
-
-          </div>
+        <side-bar></side-bar>
+        <div id="sidebar-resizer"
+          resizer="vertical"
+          resizer-width="10"
+          resizer-left="#sidebar"
+          resizer-right="#content"
+          resizer-max="400">
         </div>
-        <div class="http-content">
-          <div class="http-main">
-            <simple-component></simple-component>
-            <ul class=" tabrow clearfix">
-              <li>
-                one
-                <img src="src/icons/ic_clear_black_36px.svg" alt="" />
-              </li>
-              <li>
-                two
-                <img src="src/icons/ic_clear_black_36px.svg" alt="" />
-              </li>
-              <li class="http-active">
-                three
-                <img src="./src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-              </li>
-              <li>
-                four
-                <img src="./src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-              </li>
-              <li>
-                five
-                <img src="./src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-              </li>
-              <li>
-                six
-                <img src="./src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-            </li>
-
-            </ul>
-            <div class="http-container">
-              <div class="http-container-header">
-                <div class="http-container-header-top">
-                  <div class="http-input-container">
-                    <div class="http-input-menu">
-                      GET
-                      <img src="./src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-                    </div>
-                    <input class="http-input-input" name="request-url" type="text" placeholder="Enter request URL">
-                    <div class="http-input-params">
-                      Params
-                    </div>
-                  </div>
-                  <div class="http-send-btn">
-                    <div>
-                      Send
-                    </div>
-                    <img src="src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-                  </div>
-                  <div class="http-save-btn">
-                    <div>
-                      Save
-                    </div>
-                    <img src="src/icons/ic_expand_more_greyish_36px.svg" alt="" />
-                  </div>
-                </div>
-                <div class="http-container-header-bottom">
-                  <ul>
-                    <li>Authorization</li>
-                    <li>Headers</li>
-                    <li>Body</li>
-                    <li>Pre-request Script</li>
-                    <li>Tests</li>
-                  </ul>
-                  <span>
-                    Code
-                  </span>
-                </div>
-              </div>
-              <div class="http-container-body">
-
-              </div>
-            </div>
-          </div>
-        </div>
+        <http-main></http-main>
     </main>
     </ui-view>
 
