@@ -13,8 +13,12 @@ import httpTab from './components/http-tab/httpTab.js'
 import tabRow from './components/http-tab/tabRow.js'
 import addTab from './components/http-tab/addTab.js'
 import httpInputContainer from './components/http-input-container/httpInputContainer.js'
+import login from './components/login/login.js'
 
-angular.module('parcelman', [uiRouter, mcResizer.name])
+//factorys
+import mainFctry from './fctry/mainFctry'
+
+angular.module('parcelperson', [uiRouter, mcResizer.name])
 
   .component("sideBar", sideBar)
   .component("httpMain", httpMain)
@@ -22,6 +26,8 @@ angular.module('parcelman', [uiRouter, mcResizer.name])
   .component('httpTab', httpTab)
   .component('httpInputContainer', httpInputContainer)
   .component('addTab', addTab)
+  .component('login', login)
+  .factory('mainFctry', mainFctry)
   .config(($stateProvider, $urlRouterProvider) => {
     $stateProvider
       .state('home', {

@@ -2,11 +2,22 @@ import template from './httpTab.html'
 
 export default {
   template,
+  require:{
+    parent: "^tabRow"
+  },
   bindings: {
-    currentHttp: "<curr"
+    // currentHttp: "<curr"
+    setCurrentTab: '&',
+    tab: '=repeatTab'
   },
   controller(){
-    // this.currentHttp;
-    console.log(this.currentHttp)
+
+    let something = this;
+
+    console.log(this.tab)
+    something.$onInit = function(){
+      console.log(something.parent)
+    }
+
   }
 }

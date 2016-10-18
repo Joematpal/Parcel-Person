@@ -97,14 +97,25 @@
 	
 	var _httpInputContainer2 = _interopRequireDefault(_httpInputContainer);
 	
+	var _login = __webpack_require__(/*! ./components/login/login.js */ 28);
+	
+	var _login2 = _interopRequireDefault(_login);
+	
+	var _mainFctry = __webpack_require__(/*! ./fctry/mainFctry */ 31);
+	
+	var _mainFctry2 = _interopRequireDefault(_mainFctry);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	//components
-	_angular2.default.module('parcelman', [_angularUiRouter2.default, _resizer2.default.name]).component("sideBar", _sidebar2.default).component("httpMain", _httpMain2.default).component('tabRow', _tabRow2.default).component('httpTab', _httpTab2.default).component('httpInputContainer', _httpInputContainer2.default).component('addTab', _addTab2.default).config(function ($stateProvider, $urlRouterProvider) {
+	_angular2.default.module('parcelperson', [_angularUiRouter2.default, _resizer2.default.name]).component("sideBar", _sidebar2.default).component("httpMain", _httpMain2.default).component('tabRow', _tabRow2.default).component('httpTab', _httpTab2.default).component('httpInputContainer', _httpInputContainer2.default).component('addTab', _addTab2.default).component('login', _login2.default).factory('mainFctry', _mainFctry2.default).config(function ($stateProvider, $urlRouterProvider) {
 	  $stateProvider.state('home', {
 	    url: '/'
 	  });
 	});
+	
+	//factorys
+	
 	
 	//modules
 
@@ -19151,7 +19162,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box; }\n\nbutton:focus, input:focus {\n  outline: none; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nhtml,\nbody {\n  padding: 0px;\n  box-sizing: border-box;\n  background-color: orange;\n  margin: 0;\n  font-family: 'Roboto-Thin', sans-serif; }\n\n.clearfix {\n  overflow: auto;\n  zoom: 1; }\n\nheader {\n  background: #464646;\n  width: 100%;\n  margin: 0 auto;\n  display: block; }\n\nnav {\n  width: 100%;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  nav button {\n    display: inline;\n    font-weight: lighter;\n    font-size: 12px;\n    background-color: #5a5a5a;\n    border: none;\n    color: white;\n    border-bottom: orange;\n    margin: 10px;\n    padding: 3px;\n    border-radius: 3px; }\n    nav button:hover {\n      color: black; }\n    nav button img {\n      height: 20px;\n      width: 20px; }\n    nav button p {\n      float: left;\n      margin: 4px 5px; }\n\n.left-bar {\n  float: left;\n  position: absolute;\n  border-right: solid 1px #dcdcdc;\n  background-color: #f8f8f8;\n  width: 30%;\n  height: 100vh; }\n  .left-bar .search {\n    position: relative;\n    padding: 10px 0px 5px;\n    margin: 0 auto;\n    width: 90%; }\n    .left-bar .search span {\n      position: absolute;\n      top: 16px;\n      left: 6px; }\n      .left-bar .search span img {\n        height: 20px; }\n    .left-bar .search input[type=search] {\n      padding-left: 30px;\n      height: 30px;\n      font-size: 15px;\n      width: 100%;\n      border-radius: 20px;\n      border: solid 1px #dcdcdc; }\n  .left-bar .left-bar-menu {\n    display: block;\n    color: darkgrey;\n    border-bottom: solid 1px #dcdcdc;\n    padding-top: 7px; }\n    .left-bar .left-bar-menu button {\n      display: inline-block;\n      width: 50%;\n      margin: 0;\n      background-color: #f8f8f8;\n      margin-right: -4px;\n      border: none;\n      font-size: 15px; }\n    .left-bar .left-bar-menu .button-on {\n      color: black;\n      border-bottom: solid 3px #f47023; }\n  .left-bar .history-trash {\n    display: flex;\n    position: relative;\n    height: 45px;\n    padding: 10px;\n    border-bottom: solid 1px #dcdcdc;\n    justify-content: space-between;\n    align-items: center; }\n    .left-bar .history-trash p,\n    .left-bar .history-trash span {\n      margin: 0px; }\n    .left-bar .history-trash p {\n      font-size: 14px;\n      color: orange; }\n    .left-bar .history-trash .trash-can {\n      position: absolute;\n      height: 25px;\n      top: 10px;\n      right: 15px; }\n    .left-bar .history-trash .expand {\n      position: absolute;\n      width: 15px;\n      top: 15px;\n      right: 7px; }\n\n.http-content {\n  position: absolute;\n  right: 0; }\n  .http-content .http-main {\n    display: inline-block;\n    position: relative;\n    background-color: #fff;\n    height: 100vh;\n    width: 100%; }\n    .http-content .http-main .tabrow {\n      position: relative;\n      text-align: center;\n      list-style: none;\n      margin: 0px;\n      padding: 20px 0 0 10px;\n      line-height: 24px; }\n      .http-content .http-main .tabrow:after {\n        position: absolute;\n        content: \"\";\n        width: 100%;\n        bottom: 0;\n        left: 0;\n        border-bottom: 1px solid #dcdcdc;\n        z-index: 1; }\n      .http-content .http-main .tabrow li {\n        position: relative;\n        margin-top: 0 10px;\n        padding: 5px 20px 5px 5px;\n        border: solid 1px #dcdcdc;\n        background-color: #f0f0f0;\n        width: auto;\n        font-size: 12px;\n        border-top-right-radius: 3px;\n        border-top-left-radius: 3px;\n        display: inline-block;\n        z-index: 0;\n        color: grey; }\n        .http-content .http-main .tabrow li img {\n          position: absolute;\n          top: 11px;\n          right: 4px;\n          display: inline;\n          font-size: 0;\n          height: 15px;\n          float: right; }\n      .http-content .http-main .tabrow li:before,\n      .http-content .http-main .tabrow li:after {\n        position: absolute;\n        bottom: -1px;\n        width: 6px;\n        height: 6px;\n        content: \" \";\n        border: 1px solid #dcdcdc; }\n      .http-content .http-main .tabrow li:before {\n        left: -7px;\n        border-bottom-right-radius: 3px;\n        border-width: 0 1px 1px 0; }\n      .http-content .http-main .tabrow li:after {\n        right: -7px;\n        border-bottom-left-radius: 3px;\n        border-width: 0 0 1px 1px; }\n      .http-content .http-main .tabrow .http-active {\n        background-color: #fff;\n        color: black;\n        z-index: 2;\n        border-bottom-color: #fff; }\n      .http-content .http-main .tabrow .http-active:before {\n        box-shadow: 2px 2px 0 #FFF; }\n      .http-content .http-main .tabrow .http-active:after {\n        box-shadow: -2px 2px 0 #FFF; }\n    .http-content .http-main .http-container {\n      margin: 10px;\n      width: calc(100% - 20px);\n      height: 90%;\n      border: solid 1px #dcdcdc;\n      border-radius: 3px; }\n      .http-content .http-main .http-container .http-container-header {\n        background-color: #fafafa;\n        width: 100%;\n        border-top-left-radius: 3px;\n        border-top-right-radius: 3px;\n        padding: 10px 10px 0px 10px;\n        border-bottom: solid 1px #dcdcdc; }\n        .http-content .http-main .http-container .http-container-header .http-container-header-top {\n          display: flex;\n          justify-content: space-around; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container {\n            display: inline-block;\n            background-color: #f0f0f0;\n            border: solid 1px #dcdcdc;\n            border-radius: 3px;\n            height: auto;\n            width: calc(100% - 250px);\n            vertical-align: middle; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params {\n              display: inline-block;\n              position: relative;\n              text-align: center;\n              height: 100%;\n              padding: 10px;\n              line-height: 18px;\n              vertical-align: top;\n              color: #808080;\n              font-size: 12px; }\n              .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu img, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params img {\n                position: absolute;\n                top: 6px;\n                display: inline;\n                font-size: 0;\n                height: 25px;\n                float: right; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu {\n              border-right: solid 1px #dcdcdc;\n              font-weight: bolder;\n              padding-left: 0px;\n              font-size: 15px;\n              width: 120px; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container input[name=request-url] {\n              display: inline-block;\n              height: 38px;\n              font-size: 12px;\n              width: calc(100% - 192px);\n              border: none;\n              background-color: #f0f0f0;\n              vertical-align: top;\n              padding-left: 10px; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params {\n              border-left: solid 1px #dcdcdc;\n              font-weight: lighter; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn {\n            display: inline-block;\n            border: solid 1px #dcdcdc;\n            border-radius: 3px;\n            vertical-align: middle; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn div, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn div {\n              display: inline-block;\n              padding: 11px 17px;\n              border-right: solid 1px #dcdcdc;\n              color: #808080; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn img, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn img {\n              height: 25px;\n              vertical-align: middle;\n              margin-right: 4px; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn {\n            border: solid 1px none;\n            background-color: #097bed; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn div {\n              color: white;\n              border-right: solid 1px #126dc8; }\n        .http-content .http-main .http-container .http-container-header .http-container-header-bottom {\n          display: flex;\n          justify-content: space-between; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul {\n            display: inline-block;\n            font-size: 0; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul li {\n              display: inline-block;\n              font-size: 13px;\n              padding: 25px 15px 7px 15px;\n              border-bottom: solid 3px;\n              border-color: transparent; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul li:hover {\n              border-bottom: solid 3px #f47023; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom span {\n            font-size: 12px;\n            color: #f47023;\n            padding-top: 24px;\n            vertical-align: bottom; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom span:hover {\n            color: black; }\n      .http-content .http-main .http-container .http-container-body {\n        background-color: #f0f0f0; }\n\n#topnav {\n  display: block;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  height: 49px; }\n\n#sidebar {\n  background-color: #EEE;\n  position: absolute;\n  top: 49px;\n  left: 0;\n  width: 303px;\n  overflow: auto; }\n\n#content {\n  position: absolute;\n  top: 49px;\n  left: 303px;\n  right: 0;\n  overflow: hidden; }\n\n#top-content {\n  position: absolute;\n  top: 0;\n  bottom: 136px;\n  /* 130 + 6 */\n  left: 0;\n  right: 0;\n  background-color: #444;\n  overflow: auto; }\n\n#sidebar-resizer {\n  position: absolute;\n  top: 49px;\n  height: 100%;\n  left: 303px;\n  width: 10px;\n  cursor: ew-resize;\n  box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18);\n  z-index: 20; }\n", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box; }\n\nbutton:focus, input:focus {\n  outline: none; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nhtml,\nbody {\n  padding: 0px;\n  box-sizing: border-box;\n  background-color: orange;\n  margin: 0;\n  font-family: 'Roboto-Thin', sans-serif; }\n\n.clearfix {\n  overflow: auto;\n  zoom: 1; }\n\nheader {\n  background: #464646;\n  width: 100%;\n  margin: 0 auto;\n  display: block; }\n\nnav {\n  width: 100%;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  nav button {\n    display: inline;\n    font-weight: lighter;\n    font-size: 12px;\n    background-color: #5a5a5a;\n    border: none;\n    color: white;\n    border-bottom: orange;\n    margin: 10px;\n    padding: 3px;\n    border-radius: 3px; }\n    nav button:hover {\n      color: black; }\n    nav button img {\n      height: 20px;\n      width: 20px; }\n    nav button p {\n      float: left;\n      margin: 4px 5px; }\n\n.left-bar {\n  float: left;\n  position: absolute;\n  border-right: solid 1px #dcdcdc;\n  background-color: #f8f8f8;\n  width: 30%;\n  height: 100vh; }\n  .left-bar .search {\n    position: relative;\n    padding: 10px 0px 5px;\n    margin: 0 auto;\n    width: 90%; }\n    .left-bar .search span {\n      position: absolute;\n      top: 16px;\n      left: 6px; }\n      .left-bar .search span img {\n        height: 20px; }\n    .left-bar .search input[type=search] {\n      padding-left: 30px;\n      height: 30px;\n      font-size: 15px;\n      width: 100%;\n      border-radius: 20px;\n      border: solid 1px #dcdcdc; }\n  .left-bar .left-bar-menu {\n    display: block;\n    color: darkgrey;\n    border-bottom: solid 1px #dcdcdc;\n    padding-top: 7px; }\n    .left-bar .left-bar-menu button {\n      display: inline-block;\n      width: 50%;\n      margin: 0;\n      background-color: #f8f8f8;\n      margin-right: -4px;\n      border: none;\n      font-size: 15px; }\n    .left-bar .left-bar-menu .button-on {\n      color: black;\n      border-bottom: solid 3px #f47023; }\n  .left-bar .history-trash {\n    display: flex;\n    position: relative;\n    height: 45px;\n    padding: 10px;\n    border-bottom: solid 1px #dcdcdc;\n    justify-content: space-between;\n    align-items: center; }\n    .left-bar .history-trash p,\n    .left-bar .history-trash span {\n      margin: 0px; }\n    .left-bar .history-trash p {\n      font-size: 14px;\n      color: orange; }\n    .left-bar .history-trash .trash-can {\n      position: absolute;\n      height: 25px;\n      top: 10px;\n      right: 15px; }\n    .left-bar .history-trash .expand {\n      position: absolute;\n      width: 15px;\n      top: 15px;\n      right: 7px; }\n\n.http-content {\n  position: absolute;\n  right: 0; }\n  .http-content .http-main {\n    display: inline-block;\n    position: relative;\n    background-color: #fff;\n    height: 100vh;\n    width: 100%; }\n    .http-content .http-main .tabrow {\n      position: relative;\n      list-style: none;\n      margin: 0px;\n      padding: 20px 0 0 10px;\n      line-height: 24px; }\n      .http-content .http-main .tabrow:after {\n        position: absolute;\n        content: \"\";\n        width: 100%;\n        bottom: 0;\n        left: 0;\n        border-bottom: 1px solid #dcdcdc;\n        z-index: 1; }\n      .http-content .http-main .tabrow li {\n        position: relative;\n        margin-top: 0 10px;\n        padding: 5px 20px 5px 5px;\n        border: solid 1px #dcdcdc;\n        background-color: #f0f0f0;\n        width: auto;\n        font-size: 12px;\n        border-top-right-radius: 3px;\n        border-top-left-radius: 3px;\n        display: inline-block;\n        z-index: 0;\n        color: grey; }\n        .http-content .http-main .tabrow li img {\n          position: absolute;\n          top: 11px;\n          right: 4px;\n          display: inline;\n          font-size: 0;\n          height: 15px;\n          float: right; }\n      .http-content .http-main .tabrow li:before,\n      .http-content .http-main .tabrow li:after {\n        position: absolute;\n        bottom: -1px;\n        width: 6px;\n        height: 6px;\n        content: \" \";\n        border: 1px solid #dcdcdc; }\n      .http-content .http-main .tabrow li:before {\n        left: -7px;\n        border-bottom-right-radius: 3px;\n        border-width: 0 1px 1px 0; }\n      .http-content .http-main .tabrow li:after {\n        right: -7px;\n        border-bottom-left-radius: 3px;\n        border-width: 0 0 1px 1px; }\n      .http-content .http-main .tabrow .http-active {\n        background-color: #fff;\n        color: black;\n        z-index: 2;\n        border-bottom-color: #fff; }\n      .http-content .http-main .tabrow .http-active:before {\n        box-shadow: 2px 2px 0 #FFF; }\n      .http-content .http-main .tabrow .http-active:after {\n        box-shadow: -2px 2px 0 #FFF; }\n    .http-content .http-main .http-container {\n      margin: 10px;\n      width: calc(100% - 20px);\n      height: 90%;\n      border: solid 1px #dcdcdc;\n      border-radius: 3px; }\n      .http-content .http-main .http-container .http-container-header {\n        background-color: #fafafa;\n        width: 100%;\n        border-top-left-radius: 3px;\n        border-top-right-radius: 3px;\n        padding: 10px 10px 0px 10px;\n        border-bottom: solid 1px #dcdcdc; }\n        .http-content .http-main .http-container .http-container-header .http-container-header-top {\n          display: flex;\n          justify-content: space-around; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container {\n            display: inline-block;\n            background-color: #f0f0f0;\n            border: solid 1px #dcdcdc;\n            border-radius: 3px;\n            height: auto;\n            width: calc(100% - 250px);\n            vertical-align: middle; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params {\n              display: inline-block;\n              position: relative;\n              text-align: center;\n              height: 100%;\n              padding: 10px;\n              line-height: 18px;\n              vertical-align: top;\n              color: #808080;\n              font-size: 12px; }\n              .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu img, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params img {\n                position: absolute;\n                top: 6px;\n                display: inline;\n                font-size: 0;\n                height: 25px;\n                float: right; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-menu {\n              border-right: solid 1px #dcdcdc;\n              font-weight: bolder;\n              padding-left: 0px;\n              font-size: 15px;\n              width: 120px; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container input[name=request-url] {\n              display: inline-block;\n              height: 38px;\n              font-size: 12px;\n              width: calc(100% - 192px);\n              border: none;\n              background-color: #f0f0f0;\n              vertical-align: top;\n              padding-left: 10px; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-input-container .http-input-params {\n              border-left: solid 1px #dcdcdc;\n              font-weight: lighter; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn {\n            display: inline-block;\n            border: solid 1px #dcdcdc;\n            border-radius: 3px;\n            vertical-align: middle; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn div, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn div {\n              display: inline-block;\n              padding: 11px 17px;\n              border-right: solid 1px #dcdcdc;\n              color: #808080; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-save-btn img, .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn img {\n              height: 25px;\n              vertical-align: middle;\n              margin-right: 4px; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn {\n            border: solid 1px none;\n            background-color: #097bed; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-top .http-send-btn div {\n              color: white;\n              border-right: solid 1px #126dc8; }\n        .http-content .http-main .http-container .http-container-header .http-container-header-bottom {\n          display: flex;\n          justify-content: space-between; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul {\n            display: inline-block;\n            font-size: 0; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul li {\n              display: inline-block;\n              font-size: 13px;\n              padding: 25px 15px 7px 15px;\n              border-bottom: solid 3px;\n              border-color: transparent; }\n            .http-content .http-main .http-container .http-container-header .http-container-header-bottom ul li:hover {\n              border-bottom: solid 3px #f47023; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom span {\n            font-size: 12px;\n            color: #f47023;\n            padding-top: 24px;\n            vertical-align: bottom; }\n          .http-content .http-main .http-container .http-container-header .http-container-header-bottom span:hover {\n            color: black; }\n      .http-content .http-main .http-container .http-container-body {\n        background-color: #f0f0f0; }\n\n#topnav {\n  display: block;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  height: 49px; }\n\n#sidebar {\n  background-color: #EEE;\n  position: absolute;\n  top: 49px;\n  left: 0;\n  width: 303px;\n  overflow: auto; }\n\n#content {\n  position: absolute;\n  top: 49px;\n  left: 303px;\n  right: 0;\n  overflow: hidden; }\n\n#top-content {\n  position: absolute;\n  top: 0;\n  bottom: 136px;\n  /* 130 + 6 */\n  left: 0;\n  right: 0;\n  background-color: #444;\n  overflow: auto; }\n\n#sidebar-resizer {\n  position: absolute;\n  top: 49px;\n  height: 100%;\n  left: 303px;\n  width: 10px;\n  cursor: ew-resize;\n  box-shadow: inset 3px 0px 3px 0px rgba(0, 0, 0, 0.18);\n  z-index: 20; }\n", ""]);
 	
 	// exports
 
@@ -21319,7 +21330,7 @@
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21333,12 +21344,22 @@
 	
 	exports.default = {
 	  template: _httpTab2.default,
+	  require: {
+	    parent: "^tabRow"
+	  },
 	  bindings: {
-	    currentHttp: "<curr"
+	    // currentHttp: "<curr"
+	    setCurrentTab: '&',
+	    tab: '=repeatTab'
 	  },
 	  controller: function controller() {
-	    // this.currentHttp;
-	    console.log(this.currentHttp);
+	
+	    var something = this;
+	
+	    console.log(this.tab);
+	    something.$onInit = function () {
+	      console.log(something.parent);
+	    };
 	  }
 	};
 
@@ -21349,7 +21370,7 @@
   \**********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<li>\n  {{$ctrl.currentHttp.title}}\n  <img src=\"" + __webpack_require__(/*! ../../icons/ic_clear_black_36px.svg */ 21) + "\" alt=\"\" />\n</li>\n";
+	module.exports = "<li ng-click=\"$ctrl.setCurrentTab({$event: { currentHttp: $ctrl.currentHttp }})\">\n  {{$ctrl.tab.title}}\n  <img src=\"" + __webpack_require__(/*! ../../icons/ic_clear_black_36px.svg */ 21) + "\" alt=\"\" ng-click=\"\"/>\n</li>\n";
 
 /***/ },
 /* 21 */
@@ -21380,11 +21401,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
+	  // transclude:true ,
 	  bindings: {
 	    cur: '<curr'
 	  },
 	  template: _tabRow2.default,
-	  controller: function controller() {}
+	  controller: function controller() {
+	    this.tabs = [{
+	      title: 'test'
+	    }];
+	  }
 	};
 
 /***/ },
@@ -21394,7 +21420,7 @@
   \*********************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<ul class=\" tabrow clearfix\">\n  <http-tab curr=\"$ctrl.cur\"></http-tab>\n  <add-tab></add-tab>\n</ul>\n";
+	module.exports = "<ul class=\"tabrow clearfix\" id=\"tabrow\">\n  <http-tab curr=\"$ctrl.cur\" on-update=\"$ctrl.updateUser($event)\" ng-repeat=\"tab in $ctrl.tabs\" repeat-tab=\"tab\">\n  </http-tab>\n  <add-tab></add-tab>\n</ul>\n";
 
 /***/ },
 /* 24 */
@@ -21413,13 +21439,33 @@
 	
 	var _addTab2 = _interopRequireDefault(_addTab);
 	
+	var _httpTab = __webpack_require__(/*! ./httpTab.html */ 20);
+	
+	var _httpTab2 = _interopRequireDefault(_httpTab);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
+	  // transclude: true,
 	  bindings: {},
+	  require: {
+	    parent: "^tabRow"
+	  },
 	  template: _addTab2.default,
 	  controller: function controller() {
-	    console.log('what is this?', document.tabRow);
+	    var self = this;
+	
+	    self.addTab = addTab;
+	
+	    //============================================================================//
+	    function addTab() {
+	      self.$onInit = function () {
+	        self.parent.tabs.push({ title: 'Add Url' });
+	        console.log(self.parent.tabs);
+	      }();
+	    }
+	
+	    //============================================================================//
 	  }
 	};
 
@@ -21430,7 +21476,7 @@
   \*********************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<li id=\"add-tab\" ng-clic=\"$ctrl.\">\n  +\n  <!-- <img src=\"../../icons/ic_add_black_36px.svg\" alt=\"\" /> -->\n</li>\n<style media=\"screen\">\n  #add-tab{\n    /*color: #f0f0f0;*/\n    padding: 5px 9px 5px 8px;\n    font-size: 22px;\n    text-align: end;\n    vertical-align: bottom;\n    font-weight: lighter;\n  }\n  #add-tab:hover{\n    color: orange;\n    cursor: pointer;\n  }\n</style>\n";
+	module.exports = "<li id=\"add-tab\" ng-click=\"$ctrl.addTab()\">\n  +\n  <!-- <img src=\"../../icons/ic_add_black_36px.svg\" alt=\"\" /> -->\n</li>\n<style media=\"screen\">\n  #add-tab{\n    /*color: #f0f0f0;*/\n    padding: 5px 9px 5px 8px;\n    font-size: 22px;\n    text-align: end;\n    vertical-align: bottom;\n    font-weight: lighter;\n  }\n  #add-tab:hover{\n    color: orange;\n    cursor: pointer;\n  }\n</style>\n";
 
 /***/ },
 /* 26 */
@@ -21469,6 +21515,80 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = "  <div class=\"http-input-menu\">\n    GET\n    <img src=\"" + __webpack_require__(/*! ../../icons/ic_expand_more_greyish_36px.svg */ 14) + "\" alt=\"\" />\n  </div>\n  <input class=\"http-input-input\" name=\"request-url\" ng-model=\"$ctrl.currentHttp.title\" type=\"text\" placeholder=\"Enter request URL\">\n  <div class=\"http-input-params\">\n    Params\n  </div>\n";
+
+/***/ },
+/* 28 */
+/*!***************************************!*\
+  !*** ./src/components/login/login.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _login = __webpack_require__(/*! ./login.html */ 29);
+	
+	var _login2 = _interopRequireDefault(_login);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  template: _login2.default,
+	  controller: function controller(mainFctry, $http) {
+	    this.login = login;
+	
+	    function login($http) {
+	      mainFctry.login().then(function (results) {
+	        console.log(results);
+	      });
+	    }
+	  }
+	};
+
+/***/ },
+/* 29 */
+/*!*****************************************!*\
+  !*** ./src/components/login/login.html ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<button><p ng-click=\"$ctrl.login()\">joematpal</p><img src=\"" + __webpack_require__(/*! ../../icons/ic_expand_more_white_36px.svg */ 30) + "\" alt=\"\" /></button>\n";
+
+/***/ },
+/* 30 */
+/*!*************************************************!*\
+  !*** ./src/icons/ic_expand_more_white_36px.svg ***!
+  \*************************************************/
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjM2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNi41OSA4LjU5TDEyIDEzLjE3IDcuNDEgOC41OSA2IDEwbDYgNiA2LTZ6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPg=="
+
+/***/ },
+/* 31 */
+/*!********************************!*\
+  !*** ./src/fctry/mainFctry.js ***!
+  \********************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	exports.default = function ($http, $q) {
+	  return {
+	    test: 'test',
+	    login: login
+	  };
+	
+	  function login() {
+	    return $http.get('http://localhost:5050/auth/google');
+	  }
+	};
 
 /***/ }
 /******/ ]);

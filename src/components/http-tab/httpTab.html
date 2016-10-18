@@ -1,4 +1,4 @@
-<li>
-  {{$ctrl.currentHttp.title}}
-  <img src="../../icons/ic_clear_black_36px.svg" alt="" />
+<li ng-click="$ctrl.setCurrentTab({$event: { currentHttp: $ctrl.currentHttp }})">
+  {{$ctrl.tab.title}}
+  <img src="../../icons/ic_clear_black_36px.svg" alt="" ng-click=""/>
 </li>
