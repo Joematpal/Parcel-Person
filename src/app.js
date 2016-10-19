@@ -12,7 +12,7 @@ import sideBar from './components/side-bar/sidebar.js'
 import httpTab from './components/http-tab/httpTab.js'
 import tabRow from './components/http-tab/tabRow.js'
 import addTab from './components/http-tab/addTab.js'
-import httpInputContainer from './components/http-input-container/httpInputContainer.js'
+import httpContainerHeaderTop from './components/http-container-header-top/httpContainerHeaderTop'
 import login from './components/login/login.js'
 
 //factorys
@@ -24,7 +24,7 @@ angular.module('parcelperson', [uiRouter, mcResizer.name])
   .component("httpMain", httpMain)
   .component('tabRow', tabRow)
   .component('httpTab', httpTab)
-  .component('httpInputContainer', httpInputContainer)
+  .component('httpContainerHeaderTop', httpContainerHeaderTop)
   .component('addTab', addTab)
   .component('login', login)
   .factory('mainFctry', mainFctry)

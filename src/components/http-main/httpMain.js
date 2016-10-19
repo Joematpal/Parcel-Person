@@ -4,8 +4,7 @@ export default {
   template,
   controller(){
     this.currentHttp = {
-      title: "Bullshavick"
+      url: "Enter request URL"
     };
-    console.log(this.currentHttp)
   }
 }

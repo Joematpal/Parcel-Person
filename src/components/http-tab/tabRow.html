@@ -1,5 +1,5 @@
 <ul class="tabrow clearfix" id="tabrow">
-  <http-tab curr="$ctrl.cur" on-update="$ctrl.updateUser($event)" ng-repeat="tab in $ctrl.tabs" repeat-tab="tab">
+  <http-tab curr="$ctrl.cur" set-current-tab="$ctrl.updateTab($event)" ng-repeat="tab in $ctrl.tabs" repeat-tab="tab">
   </http-tab>
-  <add-tab></add-tab>
+  <add-tab get-tabs="$ctrl.tabs"></add-tab>
 </ul>

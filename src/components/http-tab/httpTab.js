@@ -12,12 +12,15 @@ export default {
   },
   controller(){
 
-    let something = this;
+    let self = this;
 
-    console.log(this.tab)
-    something.$onInit = function(){
-      console.log(something.parent)
+    // self.currentHttp = {url:"Something"};
+    self.deleteTab = deleteTab;
+
+    function deleteTab(index){
+      self.parent.tabs.splice(index, 1)
     }
+
 
   }
 }

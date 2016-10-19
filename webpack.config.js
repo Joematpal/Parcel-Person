@@ -4,7 +4,7 @@ module.exports = {
   entry: ['./src/app.js'],
   module:{
     loaders: [
-      { test: /\.jsx?$/ , loader: 'babel' },
+      { test: /\.jsx?$/ , target: 'electron', loader: 'babel' },
       { test: /\.html$/, loader: "html"},
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.scss$/, loader:['style', 'css', 'scss']},
@@ -18,6 +18,7 @@ module.exports = {
   // , resolve: {
   //   extensions: ["", ".js", ".css"]
   // }
+  , target: 'electron'
   , output: {
     path:__dirname + '/src'
     , filename: 'bundle.js'

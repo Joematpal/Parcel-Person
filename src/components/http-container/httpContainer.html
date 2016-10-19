@@ -1,0 +1,58 @@
+<div class="http-container">
+    <div class="http-container-header">
+      <div class=http-container-header-top>
+        <div class="http-input-container">
+          <div class="http-input-menu">
+            <select>
+              <option value="get" selected>GET</option>
+              <option value="put">POST</option>
+              <option value="post">PUT</option>
+              <option value="patch">PATCH</option>
+              <option value="delete">DELETE</opdeletetion>
+              <option value="copy">COPY</option>
+              <option value="head">HEAD</option>
+              <option value="options">OPTIONS</option>
+              <option value="link">LINK</option>
+              <option value="unlink">UNLINK</option>
+              <option value="purge">PURGE</option>
+              <option value="lock">LOCK</option>
+              <option value="unlock">UNLOCK</option>
+              <option value="propfind">PROPFIND</option>
+              <option value="view">VIEW</option>
+            </select>
+          </div>
+          <input class="http-input-input" name="request-url" ng-model="$ctrl.currentHttp.url" type="text" placeholder="Enter request URL">
+          <div class="http-input-params">
+            Params
+          </div>
+        </div>
+        <div class="http-send-btn">
+          <div>
+            Send
+          </div>
+          <img src="../../icons/ic_expand_more_greyish_36px.svg" alt="" />
+        </div>
+        <div class="http-save-btn">
+          <div>
+            Save
+          </div>
+          <img src="../../icons/ic_expand_more_greyish_36px.svg" alt="" />
+        </div>
+      </div>
+      <div class="http-container-header-bottom">
+        <ul>
+          <li>Authorization</li>
+          <li>Headers</li>
+          <li>Body</li>
+          <li>Pre-request Script</li>
+          <li>Tests</li>
+        </ul>
+        <span>
+          Code
+        </span>
+      </div>
+      </div>
+      <div class="http-container-body">
+
+      </div>
+    </div>

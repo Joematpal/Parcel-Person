@@ -1,4 +1,4 @@
-<li ng-click="$ctrl.setCurrentTab({$event: { currentHttp: $ctrl.currentHttp }})">
-  {{$ctrl.tab.title}}
-  <img src="../../icons/ic_clear_black_36px.svg" alt="" ng-click=""/>
+<li ng-click="$ctrl.setCurrentTab({$event: { tab: $ctrl.tab }})">
+  {{$ctrl.tab.url}}
+  <img src="../../icons/ic_clear_black_36px.svg" alt="" ng-click="$ctrl.deleteTab($ctrl.tab.index)"/>
 </li>
